@@ -7,11 +7,10 @@ export class CopykittInfraStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'CopykittInfraQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    const apiLambda = new lambda.Function(this, "ApiFunction", {
+      runtime: lambda.Runtime.PYTHON_3_8,
+      code: lambda.Code.fromAsset("../app/"),
+      handler: ""
+    })
   }
 }
