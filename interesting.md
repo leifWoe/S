@@ -14,4 +14,4 @@
 | `?42`     | this many untracked files                                            | `git status --ignore-submodules=dirty`                 |
 | `─`       | the number of staged, unstaged or untracked files is unknown
 
-KEY: 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
+KEY in production: KEY Variable -> Use a Key Management Service -> Monitor your token usage and rotate your keys when needed

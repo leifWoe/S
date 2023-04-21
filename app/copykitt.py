@@ -1,4 +1,4 @@
-# import os
+import os
 import re
 import openai
 import argparse
@@ -31,7 +31,8 @@ def validating_prompt_length(prompt: str) -> bool:
 def generate_snippet_openai_api_call(user_input: str) -> str:
     # auth at openAI
     openai.organization = 'org-i19EoyPkRCwwIyJUGPDcqHTg'
-    openai.api_key = ('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')
+    openai.api_key = ('')
+    openai.api_key = os.environ["OPENAI_API_KEY"]
     openai.Model.list()
     # API Call
     prompt = f"Generate only one upbeat branding snippet for {user_input}"
@@ -47,7 +48,8 @@ def generate_snippet_openai_api_call(user_input: str) -> str:
 def generate_keywords_openai_api_call(user_input: str) -> 'list[str]':
     # auth at openAI
     openai.organization = 'org-i19EoyPkRCwwIyJUGPDcqHTg'
-    openai.api_key = ('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')
+    openai.api_key = ('')
+    openai.api_key = os.environ["OPENAI_API_KEY"]
     openai.Model.list()
     # API Call
     prompt = f"Generate related upbeat branding keywords for {user_input}"
@@ -55,7 +57,7 @@ def generate_keywords_openai_api_call(user_input: str) -> 'list[str]':
         engine='text-davinci-003', prompt=prompt, max_tokens=32)
     # extract for first text only
     keywords_response = response["choices"][0]["text"].strip()
-    print(keywords_response)
+    # print(keywords_response)
     # strip most common chat-gpt list types and put in a list
     # else start again  # TODO make better
     if keywords_response[0] == '-':
