@@ -1,9 +1,12 @@
 from fastapi import FastAPI
+from mangum import Mangum
 from copykitt import generate_keywords_openai_api_call
 from copykitt import generate_snippet_openai_api_call
 
 
 app = FastAPI()
+
+handler = Mangum('app')
 
 
 @app.get("/generate_snippet")
