@@ -21,3 +21,10 @@ docker docs: https://docs.docker.com/engine/install/linux-postinstall/
 aws api endpoint test labor: https://eu-central-1.console.aws.amazon.com/apigateway/home?region=eu-central-1#/apis/knde0xjtj4/resources/dhvruv/methods/ANY
 
 aws console CopykittInfraStack-ApiFunctionCE271BD4-Kn4bLPzjSgld : https://eu-central-1.console.aws.amazon.com/lambda/home?region=eu-central-1#/functions/CopykittInfraStack-ApiFunctionCE271BD4-Kn4bLPzjSgld?tab=configure
+
+
+
+
+http://localhost:3000/ local dev server 
+next js : https://nextjs.org/learn/basics/create-nextjs-app/setup
+react : https://legacy.reactjs.org/docs/getting-started.html
