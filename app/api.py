@@ -6,7 +6,7 @@ from copykitt import generate_snippet_openai_api_call
 
 app = FastAPI()
 
-handler = Mangum('app')
+handler = Mangum(app)
 
 
 @app.get("/generate_snippet")
