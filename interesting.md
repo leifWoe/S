@@ -15,3 +15,9 @@
 | `─`       | the number of staged, unstaged or untracked files is unknown
 
 KEY in production: KEY Variable -> Use a Key Management Service -> Monitor your token usage and rotate your keys when needed
+
+docker docs: https://docs.docker.com/engine/install/linux-postinstall/
+
+aws api endpoint test labor: https://eu-central-1.console.aws.amazon.com/apigateway/home?region=eu-central-1#/apis/knde0xjtj4/resources/dhvruv/methods/ANY
+
+aws console CopykittInfraStack-ApiFunctionCE271BD4-Kn4bLPzjSgld : https://eu-central-1.console.aws.amazon.com/lambda/home?region=eu-central-1#/functions/CopykittInfraStack-ApiFunctionCE271BD4-Kn4bLPzjSgld?tab=configure

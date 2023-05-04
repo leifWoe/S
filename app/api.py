@@ -40,4 +40,6 @@ async def copykitt_api_endpoint(prompt: str):
 # events(boot)
 #   https://www.tutorialspoint.com/fastapi/fastapi_event_handlers.htm
 
+# openai website: https://platform.openai.com/account/api-keys
+# fastapi doocu: https://fastapi.tiangolo.com/tutorial/first-steps/
 # uvicorn api:app --reload
