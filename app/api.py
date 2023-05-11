@@ -20,20 +20,20 @@ app.add_middleware(
 @app.get("/generate_snippet")
 async def generate_snippet_api_endpoint(prompt: str):
     snippet = generate_snippet_openai_api_call(prompt)
-    return {f'Snippet: {snippet}'}
+    return {'Snippet': {snippet}}
 
 
 @app.get("/generate_keyword")
 async def generate_keyword_api_endpoint(prompt: str):
     keyword = generate_keywords_openai_api_call(prompt)
-    return {f'Keywords: {keyword}'}
+    return {'Keywords': {keyword}}
 
 
 @app.get("/generate_copykitt_output")
 async def copykitt_api_endpoint(prompt: str):
     keyword = generate_keywords_openai_api_call(prompt)
     snippet = generate_snippet_openai_api_call(prompt)
-    return {f'Keywords: {keyword} Snippet: {snippet}'}
+    return {'Keywords': {keyword}, 'Snippet': {snippet}}
 
 
 # todo

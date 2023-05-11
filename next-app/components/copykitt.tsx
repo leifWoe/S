@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 const Copykitt: React.FC = () => {
 
@@ -14,14 +15,17 @@ const Copykitt: React.FC = () => {
         console.log("Submitting: " + prompt);
         fetch(`https://knde0xjtj4.execute-api.eu-central-1.amazonaws.com/prod/generate_copykitt_output?prompt=${prompt}`)
         .then((res) => res.json())
-        .then(onResult);
+        .then(onResult)
+        .catch((err) => {
+        console.log(err.message);
+      });
     };
 
     const onResult = (data: any) => {
         console.log(data);
         console.log("Data: " + data);
-        setSnippet(data.snippet);
         setKeywords(data.keywords);
+        setSnippet(data.snippet);
         console.log("Data -> Snippet: " + data.snippet)
         sethasResults(true);
     };    
