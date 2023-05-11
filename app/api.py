@@ -2,11 +2,19 @@ from fastapi import FastAPI
 from mangum import Mangum
 from copykitt import generate_keywords_openai_api_call
 from copykitt import generate_snippet_openai_api_call
-
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
 handler = Mangum(app)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*'],
+)
 
 
 @app.get("/generate_snippet")
